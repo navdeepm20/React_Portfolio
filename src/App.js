@@ -1,24 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import {Container,Grid} from '@mui/material';
+import Profile from './components/Profile'
+import Header from './components/Header'
+import Footer from './components/Footer';
+import Portfolio from './pages/Portfolio';
+import Resume from './pages/Resume';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Container>
+        <Grid container>
+          <Grid item xs={12} sm={12} md={4} lg={3} style={{backgroundColor: '#C84B31'}}>
+            <Profile/>
+          </Grid>
+          <Grid item xs={12} sm={12} md={8} lg={9} style={{backgroundColor:"#ECDBBA"}}>
+            <Header/>
+              <Routes>
+                  <Route path="/portfolio" element={<Portfolio/>}/>
+                  <Route path="/" element={<Resume/>}/>
+              </Routes>
+            <Footer/>
+          </Grid>
+        </Grid>
+      </Container>
+    </Router>
+    
   );
 }
 
