@@ -1,8 +1,7 @@
-import './App.css';
 import {Container,Grid} from '@mui/material';
-import Profile from './components/Profile'
-import Header from './components/Header'
-import Footer from './components/Footer';
+import Profile from './components/Profile/Profile'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer';
 import Portfolio from './pages/Portfolio';
 import Resume from './pages/Resume';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
