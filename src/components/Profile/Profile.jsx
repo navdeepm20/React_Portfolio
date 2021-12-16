@@ -4,7 +4,8 @@ import Box from '@mui/material/Box'
 import { Typography } from "@mui/material";
 import prog from '../../assets/images/prog.jpg'
 import { useStyles } from "./profile_styles";
-import Btn from "../sub_components/Btn";
+import Btn from "../sub_components/Btn/Btn";
+import {TimelineComponent} from "../sub_components/Timeline/Timeline";
 const Profile = () => {
 	const classes = useStyles()
 	return (
@@ -20,10 +21,10 @@ const Profile = () => {
 			<Box className={classes.profile_image_container}>
 				<img src={prog} alt="profile_image" className={classes.profile_image_container_img} />
 			</Box>
-			<Box className={classes.button_container}>
+			<Box className={classes.button_timeline_container}>
+				<TimelineComponent/>
 				<Btn title={"Download"}/>
 			</Box>
-			
 		</Paper>
 	)
 }

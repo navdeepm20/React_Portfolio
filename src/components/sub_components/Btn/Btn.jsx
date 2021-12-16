@@ -1,7 +1,7 @@
 import Button from '@mui/material/Button';
 import './btn_styles'
 import {ThemeProvider } from '@mui/material/styles';
-import { btnTheme } from '../../themes/button_theme';
+import {btnTheme} from '../../../themes/button_theme'
 import React from 'react'
 
 

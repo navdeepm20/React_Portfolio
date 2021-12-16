@@ -41,16 +41,12 @@ export const useStyles = makeStyles({
 	{
 		textTransform: 'uppercase',
 	},
-	button_container:
+	button_timeline_container:
 	{
 		display: 'flex',
+
 		justifyContent: 'center',
+		flexDirection: 'column',
 		
 	}
 })
-
-
-
-
-
-
