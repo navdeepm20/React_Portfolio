@@ -11,7 +11,7 @@ function App() {
     <Router>
       <Container>
         <Grid container>
-          <Grid item xs={12} sm={12} md={4} lg={3} style={{backgroundColor: '#C84B31'}}>
+          <Grid item xs={12} sm={12} md={4} lg={3} style={{}}>
             <Profile/>
           </Grid>
           <Grid item xs={12} sm={12} md={8} lg={9} style={{backgroundColor:"#ECDBBA"}}>
