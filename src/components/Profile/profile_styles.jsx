@@ -22,7 +22,6 @@ export const useStyles = makeStyles({
 		width: '100%',
 		height: '100%',
 		position: 'relative',
-		marginBottom: '1rem',
 		paddingBottom: '1px',
 	},
 	profile_image_container_img:{
@@ -44,9 +43,9 @@ export const useStyles = makeStyles({
 	button_timeline_container:
 	{
 		display: 'flex',
-
 		justifyContent: 'center',
 		flexDirection: 'column',
+		marginTop: '-35px'
 		
 	}
 })

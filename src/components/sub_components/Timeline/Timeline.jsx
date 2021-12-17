@@ -13,14 +13,14 @@ export const TimelineComponent = (props)=>{
 			<Timeline>
 				<TimelineItem className={classes.timeline_item}>
 					<TimelineSeparatorComponets/>
-					<TimelineContent className={classes.timeline_content}> </TimelineContent >
+					<TimelineContent className={classes.timeline_content}> </TimelineContent>
 				</TimelineItem>
 				<TimelineItem className={classes.timeline_item,classes.timeline_margin}>
-					<TimelineSeparator >
+					<TimelineSeparator>
 					<TimelineDot className={classes.timelinedot}/>
 					<TimelineConnector className={classes.timelineconnector} />   
 					</TimelineSeparator >
-					<TimelineContent className={classes.timeline_content}>Name</TimelineContent>
+					<TimelineContent className={classes.timeline_content}>Name:</TimelineContent>
 				</TimelineItem>
 				<TimelineItem className={classes.timeline_item,classes.timeline_margin}>
 					<TimelineSeparator>
