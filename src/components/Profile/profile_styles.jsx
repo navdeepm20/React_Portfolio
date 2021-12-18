@@ -34,11 +34,16 @@ export const useStyles = makeStyles({
 	{
 		textTransform: 'uppercase',
 		fontWeight: 700,
+		fontSize: '17px',
+		color: '#333'
 	},
 	
 	designation:
 	{
 		textTransform: 'uppercase',
+		color: '#777777',
+		fontSize: '13px',
+		textTransform: 'capitalize'
 	},
 	button_timeline_container:
 	{
@@ -48,5 +53,6 @@ export const useStyles = makeStyles({
 		marginTop: '-35px',
 		alignItems: 'flex-start'
 		
-	}
+	},
+	
 })

@@ -10,7 +10,7 @@ import Typography from '@mui/material/Typography';
 const profile_data = {
 	Name: "Navdeep Mishra",
 	Birthday: "20/06/2000",
-	Job: "FrontEnd Engineer @Neurobit",
+	Job: "FrontEnd Engineer",
 	Email: "navdeep@gm.com",
 	Skype: "skype@gm.com",
 }
@@ -36,8 +36,7 @@ export const TimelineComponent = (props)=>{
 									<TimelineDot className={classes.timelinedot}/>  
 									<TimelineConnector className={classes.timelineconnector} /> 
 								</TimelineSeparator >	}
-
-								<TimelineContent className={classes.timeline_content}>{el}: <Typography variant='caption' component="span">{profile_data[el]}</Typography></TimelineContent>
+								<TimelineContent className={classes.timeline_content}>{el}: <Typography variant='caption' component="span" className={classes.data_values}>{profile_data[el]}</Typography></TimelineContent>
 							</TimelineItem>
 				
 					})

@@ -15,7 +15,7 @@ const Profile = () => {
 				<Typography variant="subtitle1" component="div" gutterBottom className={classes.name_title}>
 					Navdeep Mishra
 				</Typography>
-				<Typography variant="subtitle2" component="p" gutterBottom className="designation">
+				<Typography variant="subtitle2" component="p" gutterBottom className={classes.designation}>
 					Creative Design
 				</Typography>
 			</Box>
@@ -24,7 +24,7 @@ const Profile = () => {
 			</Box>
 			<Box className={classes.button_timeline_container}>
 				<TimelineComponent/>
-				<Btn title={"Download Cv"} sx={{alignSelf: 'center'}}><CloudDownloadIcon/></Btn>
+				<Btn title={"Download Cv"} ><CloudDownloadIcon/></Btn>
 			</Box>
 		</Paper>
 	)

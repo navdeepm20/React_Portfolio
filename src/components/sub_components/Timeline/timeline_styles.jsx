@@ -55,5 +55,9 @@ export const useStyles = makeStyles({
 		margin: '14px 2px 10px 5px',
 		
 		 
+	},
+	data_values: {
+		fontSize: '13.5px',
+		color: '#7f7f7f'
 	}
 })

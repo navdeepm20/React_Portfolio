@@ -10,7 +10,7 @@ function App() {
   return (
     <Router>
       <Container>
-        <Grid container>
+        <Grid container sx={{marginTop: '60px'}}>
           <Grid item xs={12} sm={12} md={4} lg={3} style={{}}>
             <Profile/>
           </Grid>
