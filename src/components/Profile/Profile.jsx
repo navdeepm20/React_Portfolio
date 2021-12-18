@@ -6,6 +6,7 @@ import prog from '../../assets/images/prog.jpg'
 import { useStyles } from "./profile_styles";
 import Btn from "../sub_components/Btn/Btn";
 import {TimelineComponent} from "../sub_components/Timeline/Timeline";
+import CloudDownloadIcon from '@mui/icons-material/CloudDownload';
 const Profile = () => {
 	const classes = useStyles()
 	return (
@@ -23,7 +24,7 @@ const Profile = () => {
 			</Box>
 			<Box className={classes.button_timeline_container}>
 				<TimelineComponent/>
-				<Btn title={"Download"}/>
+				<Btn title={"Download Cv"} sx={{alignSelf: 'center'}}><CloudDownloadIcon/></Btn>
 			</Box>
 		</Paper>
 	)

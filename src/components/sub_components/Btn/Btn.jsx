@@ -9,7 +9,7 @@ function Btn(props) {
 	
 	return (
 		<ThemeProvider theme={btnTheme}>
-			<Button variant="contained" sx={{mb:'30px'}}>{props.title}</Button>
+			<Button variant="contained" sx={{mb:'30px'}} endIcon={props.children}>{props.title}</Button>
 		</ThemeProvider>
 	)
 }

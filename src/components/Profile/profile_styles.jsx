@@ -45,7 +45,8 @@ export const useStyles = makeStyles({
 		display: 'flex',
 		justifyContent: 'center',
 		flexDirection: 'column',
-		marginTop: '-35px'
+		marginTop: '-35px',
+		alignItems: 'flex-start'
 		
 	}
 })
