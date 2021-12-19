@@ -2,7 +2,7 @@ import {makeStyles} from '@mui/styles';
 
 export const useStyles = makeStyles({
 	profile_container:{
-			borderRadius: '6px',
+			borderRadius: '10px',
 			width: '100%',
 		},
 	profile_name_designation_section:
@@ -29,6 +29,7 @@ export const useStyles = makeStyles({
 		height: '100%',
 		objectFit: 'cover',
 		clipPath: 'polygon(0 9%, 100% 0, 100% 94%, 0% 100%)',
+		minHeight: '263px'
 	},
 	name_title:
 	{

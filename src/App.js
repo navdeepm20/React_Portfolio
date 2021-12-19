@@ -11,10 +11,10 @@ function App() {
     <Router>
       <Container>
         <Grid container sx={{marginTop: '60px'}}>
-          <Grid item xs={12} sm={12} md={4} lg={3} style={{}}>
+          <Grid item xs={12} sm={12} md={4} lg={3} sx={{px: '15px'}}>
             <Profile/>
           </Grid>
-          <Grid item xs={12} sm={12} md={8} lg={9} style={{backgroundColor:"#ECDBBA"}}>
+          <Grid item xs={12} sm={12} md={8} lg={9} sx={{px: '15px'}} >
             <Header/>
               <Routes>
                   <Route path="/portfolio" element={<Portfolio/>}/>
