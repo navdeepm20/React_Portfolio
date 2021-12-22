@@ -11,7 +11,6 @@ function Btn({ title, icon }) {
     <ThemeProvider theme={btnTheme}>
       <Button
         variant="contained"
-        sx={{ mb: "30px" }}
         endIcon={icon ? <div className={classes.icon}>{icon}</div> : null}
         className={classes.btn}
         size="small"

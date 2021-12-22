@@ -39,10 +39,12 @@ const Profile = () => {
       </Box>
       <Box className={classes.button_timeline_container}>
         <TimelineComponent />
-        <Btn
-          title="Download Cv"
-          icon={<CloudDownloadIcon fontSize="small" />}
-        ></Btn>
+        <Box style={{ marginBottom: "20px", margin: "0 auto 20px" }}>
+          <Btn
+            title="Download Cv"
+            icon={<CloudDownloadIcon style={{ fontSize: "15px" }} />}
+          ></Btn>
+        </Box>
       </Box>
     </Paper>
   );

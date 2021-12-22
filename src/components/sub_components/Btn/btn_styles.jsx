@@ -4,7 +4,7 @@ export const useStyles = makeStyles({
   btn: {
     maxWidth: "148px",
     margin: "auto",
-    marginBottom: "30px",
+    // marginBottom: "30px",
   },
   icon: {
     background: "#fff",
