@@ -15,14 +15,14 @@ import SendIcon from "@mui/icons-material/Send";
 function Header() {
   const classes = useStyles();
   return (
-    <Paper elevation={0} sx={{ borderRadius: "10px" }}>
+    <Paper elevation={0} sx={{ borderRadius: "10px", marginBottom: "35px" }}>
       <Grid
         container
         display="flex"
         alignItems="center"
         justifyContent="space-between"
       >
-        <Grid item lg={8}>
+        <Grid item lg={9}>
           <Box>
             <Stack direction="row" spacing={2} alignItems="center">
               <Box className={`${classes.navbar_items} ${classes.navbar_home}`}>
@@ -63,7 +63,7 @@ function Header() {
             </Stack>
           </Box>
         </Grid>
-        <Grid item lg={4} sx={{ pr: "10px" }}>
+        <Grid item lg={3} sx={{ pr: "10px" }}>
           <Stack direction="row" alignItems="center">
             <Box sx={{ mr: "10px" }}>
               <Stack direction="row">
