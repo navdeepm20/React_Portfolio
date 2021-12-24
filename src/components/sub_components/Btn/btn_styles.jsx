@@ -5,6 +5,10 @@ export const useStyles = makeStyles({
     maxWidth: "148px",
     margin: "auto",
     // marginBottom: "30px",
+    fontSize: "14px",
+    textTransform: "capitalize",
+    fontWeight: "500",
+    color: "black",
   },
   icon: {
     background: "#fff",
