@@ -20,7 +20,8 @@ function App() {
             <Routes>
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/resume" element={<Resume />} />
-              <Route path="/" element={<About />} />
+              {/* <Route path="/" element={<About />} /> */}
+              <Route path="/" element={<Resume />} />
             </Routes>
             <Footer title={"Navdeep Mishra"} />
           </Grid>

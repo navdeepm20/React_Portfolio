@@ -6,8 +6,8 @@ import Paper from "@mui/material/Paper";
 import ComputerIcon from "@mui/icons-material/Computer";
 import StorageIcon from "@mui/icons-material/Storage";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
-
 import Skill from "../sub_components/Skill/Skill";
+import SubHeading from "../sub_components/Sub_Heading/SubHeading";
 function About() {
   return (
     <Grid
@@ -21,27 +21,7 @@ function About() {
     >
       <Grid item sx={{ px: "30px", py: "40px" }}>
         <Box>
-          <Box
-            sx={{
-              position: "relative",
-              display: "inline-block",
-              marginBottom: "30px",
-            }}
-          >
-            <Typography variant="h5" component="h5">
-              About Me
-            </Typography>
-            <span
-              style={{
-                width: "100%",
-                borderBottom: "5px solid #ffb100",
-                position: "absolute",
-                height: "70px",
-                bottom: "5px",
-                opacity: "0.4",
-              }}
-            ></span>
-          </Box>
+          <SubHeading title="About Me" />
           <Typography
             variant="body1"
             sx={{ color: "#4c4c4c", fontSize: "13px" }}
@@ -66,27 +46,7 @@ function About() {
         </Box>
       </Grid>
       <Grid item lg={12} sx={{ px: "30px", py: "40px" }}>
-        <Box
-          sx={{
-            position: "relative",
-            display: "inline-block",
-            marginBottom: "30px",
-          }}
-        >
-          <Typography variant="h5" component="h5">
-            My Services
-          </Typography>
-          <span
-            style={{
-              width: "100%",
-              borderBottom: "5px solid #ffb100",
-              position: "absolute",
-              height: "70px",
-              bottom: "5px",
-              opacity: "0.4",
-            }}
-          ></span>
-        </Box>
+        <SubHeading title="My Services" />
         <Box display="flex" justifyContent="flex-start">
           <Paper
             sx={{
@@ -209,27 +169,7 @@ function About() {
       <Grid item lg={12} sx={{ px: "30px", py: "40px" }}>
         <Grid container>
           <Grid item sm={12} lg={12}>
-            <Box
-              sx={{
-                position: "relative",
-                display: "inline-block",
-                marginBottom: "30px",
-              }}
-            >
-              <Typography variant="h5" component="h5">
-                My Skills
-              </Typography>
-              <span
-                style={{
-                  width: "100%",
-                  borderBottom: "5px solid #ffb100",
-                  position: "absolute",
-                  height: "70px",
-                  bottom: "5px",
-                  opacity: "0.4",
-                }}
-              ></span>
-            </Box>
+            <SubHeading title="My Services" />
           </Grid>
           <Grid item sm={12} lg={6}>
             <Skill skill="Html" progress={70} />

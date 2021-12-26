@@ -5,7 +5,7 @@ import { Typography } from "@mui/material";
 import prog from "../../assets/images/prog.jpg";
 import { useStyles } from "./profile_styles";
 import Btn from "../sub_components/Btn/Btn";
-import { TimelineComponent } from "../sub_components/Timeline/Timeline";
+import { TimelineComponent } from "../sub_components/Timeline/TimelineComponent";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 
 const Profile = () => {
@@ -38,7 +38,7 @@ const Profile = () => {
         />
       </Box>
       <Box className={classes.button_timeline_container}>
-        <TimelineComponent />
+        <TimelineComponent type="Profile" />
         <Box style={{ marginBottom: "20px", margin: "0 auto 20px" }}>
           <Btn
             title="Download Cv"
