@@ -20,7 +20,7 @@ function ProfileTimeline() {
           <TimelineConnector className={classes.timelineconnector} />
         </TimelineSeparator>
 
-        <TimelineContent sx={{ pb: "40px", pl: "30px" }}>
+        <TimelineContent sx={{ pb: "40px", pl: "30px", pt: 0 }}>
           <Typography
             variant="caption"
             component="h3"
@@ -54,7 +54,7 @@ function ProfileTimeline() {
           <TimelineConnector className={classes.timelineconnector} />
         </TimelineSeparator>
 
-        <TimelineContent sx={{ pb: "40px", pl: "30px" }}>
+        <TimelineContent sx={{ pb: "40px", pl: "30px", pt: 0 }}>
           <Typography
             variant="caption"
             component="h3"
@@ -88,7 +88,7 @@ function ProfileTimeline() {
           <TimelineConnector className={classes.timelineconnector} />
         </TimelineSeparator>
 
-        <TimelineContent sx={{ pb: "40px", pl: "30px" }}>
+        <TimelineContent sx={{ pb: "40px", pl: "30px", pt: 0 }}>
           <Typography
             variant="caption"
             component="h3"
