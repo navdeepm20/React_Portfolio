@@ -38,7 +38,10 @@ const Profile = () => {
         />
       </Box>
       <Box className={classes.button_timeline_container}>
-        <TimelineComponent type="Profile" />
+        <TimelineComponent
+          type="Profile"
+          icon_img={require("../../assets/images/glasses.png").default}
+        />
         <Box style={{ marginBottom: "20px", margin: "0 auto 20px" }}>
           <Btn
             title="Download Cv"

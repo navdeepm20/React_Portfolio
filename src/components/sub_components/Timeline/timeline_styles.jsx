@@ -10,10 +10,10 @@ export const useStyles = makeStyles({
     position: "relative",
   },
   timelineconnector: {
-    background: "#eee",
+    background: "#bdbdbd",
     padding: 0,
     margin: 0,
-    width: "2px",
+    width: "1px",
   },
   timelinedot_big: {
     background: "#ffc500",
@@ -24,11 +24,11 @@ export const useStyles = makeStyles({
     position: "relative",
   },
   timelineconnector_long: {
-    background: "#eee",
+    background: "#bdbdbd",
     height: "30px",
     padding: 0,
     margin: 0,
-    width: "2px",
+    width: "1px",
   },
   timeline_item: {
     minHeight: "40px",

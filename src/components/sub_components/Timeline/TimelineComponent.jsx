@@ -2,7 +2,7 @@ import Timeline from "@mui/lab/Timeline";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
 
-import TimelineSeparatorComponets from "./TimelineSeparatorComponents";
+import TimelineBigDot from "./TimelineBigDot";
 import { useStyles } from "./timeline_styles";
 import ProfileTimeline from "./ProfileTimeline";
 import ResumeTimeline from "./ResumeTimeline";
@@ -12,10 +12,9 @@ export const TimelineComponent = (props) => {
   return (
     <Timeline>
       <TimelineItem className={classes.timeline_item}>
-        <TimelineSeparatorComponets />
-        <TimelineContent className={classes.timeline_content}>
-          {" "}
-        </TimelineContent>
+        <TimelineBigDot icon_img={props.icon_img} icon={props.icon} />
+
+        <TimelineContent className={classes.timeline_content}></TimelineContent>
       </TimelineItem>
       {props.type.toLowerCase() === "profile" ? (
         <ProfileTimeline />

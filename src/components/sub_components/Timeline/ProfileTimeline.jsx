@@ -20,7 +20,6 @@ function ProfileTimeline() {
   const classes = useStyles();
   return Object.keys(profile_data).map((el, key) => {
     counter += 1;
-    console.log(counter === Object.keys(profile_data).length);
     return (
       <TimelineItem
         key={key}
