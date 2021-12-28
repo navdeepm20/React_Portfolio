@@ -12,7 +12,7 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import Btn from "../sub_components/Btn/Btn";
 import SendIcon from "@mui/icons-material/Send";
-
+import { Link } from "react-router-dom";
 function Header() {
   const classes = useStyles();
   return (
@@ -27,7 +27,9 @@ function Header() {
           <Box>
             <Stack direction="row" spacing={2} alignItems="center">
               <Box className={`${classes.navbar_items} ${classes.navbar_home}`}>
-                <HomeIcon />
+                <Link to="/">
+                  <HomeIcon />
+                </Link>
               </Box>
 
               <Typography
@@ -35,7 +37,7 @@ function Header() {
                 variant="body1"
                 component="h5"
               >
-                Resume
+                <Link to="/resume">Resume</Link>
               </Typography>
 
               <Typography
@@ -43,7 +45,7 @@ function Header() {
                 variant="body1"
                 component="h5"
               >
-                Portfolio
+                <Link to="/portfolio">Portfolio</Link>
               </Typography>
 
               <Typography
