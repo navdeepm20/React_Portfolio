@@ -24,3 +24,6 @@ code {
 .MuiTimelineItem-missingOppositeContent::before {
   display: none;
 }
+.active {
+  color: #e6b000 !important;
+}

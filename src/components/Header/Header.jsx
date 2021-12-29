@@ -13,6 +13,29 @@ import GitHubIcon from "@mui/icons-material/GitHub";
 import Btn from "../sub_components/Btn/Btn";
 import SendIcon from "@mui/icons-material/Send";
 import { Link } from "react-router-dom";
+import { styled } from "@mui/system";
+
+const StyledLink = styled(Link, {
+  name: "StyledLink",
+  slot: "wrapper",
+})({
+  color: "#111",
+  textDecoration: "none",
+  transition: ".2s ease",
+  ":hover": {
+    color: "#ffc500",
+  },
+});
+const IconStyles = {
+  width: "14px",
+  transition: ".2 ease",
+  cursor: "pointer",
+
+  mx: "2px",
+  ":hover": {
+    width: "16px",
+  },
+};
 function Header() {
   const classes = useStyles();
   return (
@@ -27,9 +50,9 @@ function Header() {
           <Box>
             <Stack direction="row" spacing={2} alignItems="center">
               <Box className={`${classes.navbar_items} ${classes.navbar_home}`}>
-                <Link to="/">
+                <StyledLink to="/" sx={{ ":hover": { color: "#111" } }}>
                   <HomeIcon />
-                </Link>
+                </StyledLink>
               </Box>
 
               <Typography
@@ -37,7 +60,7 @@ function Header() {
                 variant="body1"
                 component="h5"
               >
-                <Link to="/resume">Resume</Link>
+                <StyledLink to="/resume">Resume</StyledLink>
               </Typography>
 
               <Typography
@@ -45,7 +68,7 @@ function Header() {
                 variant="body1"
                 component="h5"
               >
-                <Link to="/portfolio">Portfolio</Link>
+                <StyledLink to="/portfolio">Portfolio</StyledLink>
               </Typography>
 
               <Typography
@@ -68,12 +91,12 @@ function Header() {
         </Grid>
         <Grid item lg={3} sx={{ pr: "10px" }}>
           <Stack direction="row" alignItems="center">
-            <Box sx={{ mr: "10px" }}>
+            <Box sx={{ mr: "10px", width: "80px" }}>
               <Stack direction="row">
-                <FacebookOutlinedIcon fontSize="small" />
-                <LinkedInIcon fontSize="small" />
-                <TwitterIcon fontSize="small" />
-                <GitHubIcon fontSize="small" />
+                <FacebookOutlinedIcon fontSize="small" sx={{ ...IconStyles }} />
+                <LinkedInIcon fontSize="small" sx={{ ...IconStyles }} />
+                <TwitterIcon fontSize="small" sx={{ ...IconStyles }} />
+                <GitHubIcon fontSize="small" sx={{ ...IconStyles }} />
               </Stack>
             </Box>
             <Box

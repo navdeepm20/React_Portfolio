@@ -1,5 +1,4 @@
 import React from "react";
-import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
 import SubHeading from "../components/sub_components/Sub_Heading/SubHeading";
 import { TimelineComponent } from "../components/sub_components/Timeline/TimelineComponent";
@@ -11,7 +10,6 @@ function Resume() {
     <Grid
       container
       sx={{
-        background: "#fff",
         borderRadius: "10px",
         marginBottom: "30px",
         background: "#f0f0f0",
@@ -39,6 +37,7 @@ function Resume() {
                   }}
                 />
               }
+              size={50}
             />
           </Grid>
           <Grid item sm={6}>

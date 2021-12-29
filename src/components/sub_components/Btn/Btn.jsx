@@ -10,6 +10,7 @@ function Btn({ title, icon }) {
   return (
     <ThemeProvider theme={btnTheme}>
       <Button
+        disableElevation
         variant="contained"
         endIcon={icon ? <div className={classes.icon}>{icon}</div> : null}
         className={classes.btn}

@@ -5,9 +5,6 @@ import { useStyles } from "./timeline_styles";
 
 function TimelineBigDot(props) {
   const classes = useStyles();
-  {
-    console.log(props.icon);
-  }
   return (
     <TimelineSeparator>
       <TimelineDot className={classes.timelinedot_big}>
@@ -28,5 +25,6 @@ function TimelineBigDot(props) {
 TimelineBigDot.defaultProps = {
   icon: false,
   icon_img: false,
+  size: 40,
 };
 export default TimelineBigDot;

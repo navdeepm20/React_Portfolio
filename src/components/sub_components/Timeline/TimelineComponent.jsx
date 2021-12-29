@@ -12,7 +12,11 @@ export const TimelineComponent = (props) => {
   return (
     <Timeline>
       <TimelineItem className={classes.timeline_item}>
-        <TimelineBigDot icon_img={props.icon_img} icon={props.icon} />
+        <TimelineBigDot
+          icon_img={props.icon_img}
+          icon={props.icon}
+          size={props.size}
+        />
 
         <TimelineContent className={classes.timeline_content}></TimelineContent>
       </TimelineItem>
