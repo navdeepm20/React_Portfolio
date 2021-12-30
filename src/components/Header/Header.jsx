@@ -14,7 +14,8 @@ import Btn from "../sub_components/Btn/Btn";
 import SendIcon from "@mui/icons-material/Send";
 import { Link } from "react-router-dom";
 import { styled } from "@mui/system";
-
+import { useContext } from "react";
+import { globalContext } from "../../context/GlobalContext";
 const StyledLink = styled(Link, {
   name: "StyledLink",
   slot: "wrapper",
@@ -38,6 +39,8 @@ const IconStyles = {
 };
 function Header() {
   const classes = useStyles();
+  const context = useContext(globalContext);
+  console.log(context.showPortfolio, "tttttt");
   return (
     <Paper elevation={0} sx={{ borderRadius: "10px", marginBottom: "35px" }}>
       <Grid
@@ -68,7 +71,14 @@ function Header() {
                 variant="body1"
                 component="h5"
               >
-                <StyledLink to="/portfolio">Portfolio</StyledLink>
+                <StyledLink
+                  to="/portfolio"
+                  onClick={() => {
+                    context.setShowPortfolio(true);
+                  }}
+                >
+                  Portfolio
+                </StyledLink>
               </Typography>
 
               <Typography

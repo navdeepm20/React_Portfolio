@@ -27,3 +27,20 @@ code {
 .active {
   color: #e6b000 !important;
 }
+.alert-enter {
+  opacity: 0 !important;
+  transform: scale(0.9) !important;
+}
+.alert-enter-active {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
+  transition: opacity 500ms, transform 500ms !important;
+}
+.alert-exit {
+  opacity: 1 !important;
+}
+.alert-exit-active {
+  opacity: 0 !important;
+  transform: scale(0.9) !important;
+  transition: opacity 500ms, transform 500ms !important;
+}

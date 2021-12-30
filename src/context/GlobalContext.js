@@ -2,27 +2,10 @@ import { createContext, useState, useReducer } from "react";
 
 export const globalContext = createContext();
 
-const globalContextProvider = (props) => {
-  const reducer = (state, action) => {
-    switch (action) {
-      case "home":
-        setBodyContent("home");
-        return;
-      case "resume":
-        setBodyContent("resume");
-      case "portfolio":
-        setBodyContent("portfolio");
-      default:
-        return;
-    }
-  };
-  const [newState, dispatch] = useReducer(reducer, initialState);
-  const [bodyContent, setBodyContent] = useState(null);
-
+export const GlobalContextProvider = (props) => {
+  const [showPortfolio, setShowPortfolio] = useState(false);
   return (
-    <globalContext.Provider
-      value={[bodyContent, setBodyContent, newState, dispatch]}
-    >
+    <globalContext.Provider value={{ showPortfolio, setShowPortfolio }}>
       {props.children}
     </globalContext.Provider>
   );
