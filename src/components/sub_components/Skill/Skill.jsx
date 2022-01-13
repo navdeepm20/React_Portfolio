@@ -1,23 +1,7 @@
 import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import LinearProgress, {
-  linearProgressClasses,
-} from "@mui/material/LinearProgress";
-import { styled } from "@mui/material/styles";
-
-const StyledLinearProgress = styled(LinearProgress)(({ theme }) => ({
-  height: "5px",
-  color: "#ffc500",
-  borderRadius: "5px",
-  [`&.${linearProgressClasses.colorPrimary}`]: {
-    backgroundColor: "#dfdfdf",
-  },
-  [`& .${linearProgressClasses.bar}`]: {
-    borderRadius: 5,
-    backgroundColor: "#ffc500",
-  },
-}));
+import LinearProgress from "@mui/material/LinearProgress";
 
 function Skill({ skill, progress }) {
   return (

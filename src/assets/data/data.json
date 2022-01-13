@@ -1,0 +1,42 @@
+{
+  "profile": {
+    "name": "Navdeep Mishra",
+    "birthday": "20/06/2000",
+    "job": "FullStack Developer",
+    "email": "navdeepmishra82734@gmail.com",
+    "git": "@navdeepm20"
+  },
+  "about": {
+    "about": [
+      "Started earnest brother believe an exposed so. Me he believing daughters if forfeited at furniture. Age again and stuff downs spoke. Late hour new nay able fat each sell. Nor themselves age introduced frequently use unsatiable devonshire get. They why quit gay cold rose deal park. One same they four did ask busy. Reserved opinions fat him nay position. Breakfast as zealously incommode do agreeable furniture. One too nay led fanny allow plate.",
+      "Quick six blind smart out burst. Perfectly on furniture dejection determine my depending an to. Add short water court fat. Her bachelor honoured perceive securing but desirous ham required. Questions deficient acuteness to engrossed as. Entirely led ten humoured greatest and yourself. Besides ye country on observe. She continue appetite endeavor she judgment interest the met. For she surrounded motionless fat resolution may."
+    ],
+    "services": [
+      {
+        "type": "FrontEnd Development",
+        "description": "Let's Build Your Beautifull FrontEnd with React"
+      },
+      {
+        "type": "BackEnd Development",
+        "description": "Just wanted to build backend? Let's create scalable web services"
+      },
+      {
+        "type": "FullStack Developement",
+        "description": "Let's create you website from scratch."
+      }
+    ],
+    "skills": [
+      { "name": "Html", "progress": 60 },
+      { "name": "Css", "progress": 60 },
+      { "name": "Javascript", "progress": 60 },
+      { "name": "Bootstrap", "progress": 60 },
+      { "name": "React", "progress": 60 },
+      { "name": "Material Ui", "progress": 60 },
+      { "name": "Python", "progress": 60 },
+      { "name": "Django/DRF", "progress": 60 },
+      { "name": "PgSql", "progress": 60 },
+      { "name": "Git/Github", "progress": 60 },
+      { "name": "Deployment", "progress": 60 }
+    ]
+  }
+}

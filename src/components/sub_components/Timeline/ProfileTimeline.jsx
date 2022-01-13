@@ -1,5 +1,4 @@
 import React from "react";
-import Box from "@mui/material/Box";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";

@@ -8,7 +8,6 @@ import TimelineContent from "@mui/lab/TimelineContent";
 import { useStyles } from "./timeline_styles";
 
 function ProfileTimeline() {
-  let counter = 0;
   const classes = useStyles();
   return (
     <>

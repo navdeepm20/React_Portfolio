@@ -172,7 +172,6 @@ function Portfolio() {
             <Grid item sm={12}>
               <Grid container spacing={4}>
                 {portfolio_data.map((el, ind) => {
-                  console.log(el.tag, tag);
                   if (el.tag === tag) {
                     return (
                       <Grid key={ind} item xs={12} sm={6} md={6} lg={4}>

@@ -4,13 +4,7 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Portfolio from "./pages/Portfolio";
 import Resume from "./pages/Resume";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useLocation,
-  Switch,
-} from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 import About from "./components/About/About";
 import { GlobalContextProvider } from "./context/GlobalContext";
 import { TransitionGroup, CSSTransition } from "react-transition-group";

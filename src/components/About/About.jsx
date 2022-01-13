@@ -13,7 +13,6 @@ function About() {
     <Grid
       container
       sx={{
-        background: "#fff",
         borderRadius: "10px",
         marginBottom: "30px",
         background: "#f0f0f0",
