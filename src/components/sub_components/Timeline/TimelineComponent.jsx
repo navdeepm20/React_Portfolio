@@ -23,7 +23,7 @@ export const TimelineComponent = (props) => {
       {props.type.toLowerCase() === "profile" ? (
         <ProfileTimeline />
       ) : (
-        <ResumeTimeline />
+        <ResumeTimeline data={props.data} category={props.category} />
       )}
     </Timeline>
   );

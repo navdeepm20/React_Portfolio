@@ -1,11 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import Grid from "@mui/material/Grid";
 import SubHeading from "../components/sub_components/Sub_Heading/SubHeading";
 import { TimelineComponent } from "../components/sub_components/Timeline/TimelineComponent";
 import WorkOutlineIcon from "@mui/icons-material/WorkOutline";
 import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
-
+import { globalContext } from "../context/GlobalContext";
 function Resume() {
+  const data = useContext(globalContext).data;
   return (
     <Grid
       container
@@ -25,6 +26,8 @@ function Resume() {
           <Grid item sm={6}>
             <TimelineComponent
               type="resume"
+              data={data.resume.work}
+              category="work"
               icon={
                 <WorkOutlineIcon
                   sx={{
@@ -43,6 +46,8 @@ function Resume() {
           <Grid item sm={6}>
             <TimelineComponent
               type="resume"
+              category="academics"
+              data={data.resume.academics}
               icon={
                 <SchoolOutlinedIcon
                   sx={{

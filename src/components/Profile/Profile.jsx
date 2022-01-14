@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
@@ -7,9 +7,11 @@ import { useStyles } from "./profile_styles";
 import Btn from "../sub_components/Btn/Btn";
 import { TimelineComponent } from "../sub_components/Timeline/TimelineComponent";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
-
+import { globalContext } from "../../context/GlobalContext";
 const Profile = () => {
   const classes = useStyles();
+  const data = useContext(globalContext).data.profile;
+
   return (
     <Paper square elevation={3} className={classes.profile_container}>
       <Box className={classes.profile_name_designation_section}>
@@ -19,7 +21,7 @@ const Profile = () => {
           gutterBottom
           className={classes.name_title}
         >
-          Navdeep Mishra
+          {data.name}
         </Typography>
         <Typography
           variant="subtitle2"
@@ -27,7 +29,7 @@ const Profile = () => {
           gutterBottom
           className={classes.designation}
         >
-          Creative Design
+          {data.designation}
         </Typography>
       </Box>
       <Box className={classes.profile_image_container}>

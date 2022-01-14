@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
@@ -6,7 +6,7 @@ import Typography from "@mui/material/Typography";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
 import { useStyles } from "./timeline_styles";
-
+import { globalContext } from "../../../context/GlobalContext";
 const profile_data = {
   Name: "Navdeep Mishra",
   Birthday: "20/06/2000",
@@ -15,16 +15,17 @@ const profile_data = {
   Skype: "skype@gm.com",
 };
 function ProfileTimeline() {
+  const data = useContext(globalContext).data.profile;
   let counter = 0;
   const classes = useStyles();
-  return Object.keys(profile_data).map((el, key) => {
+  return Object.keys(data).map((el, key) => {
     counter += 1;
     return (
       <TimelineItem
         key={key}
         className={(classes.timeline_item, classes.timeline_margin)}
       >
-        {counter === Object.keys(profile_data).length ? (
+        {counter === Object.keys(data).length ? (
           <TimelineSeparator>
             <TimelineDot className={classes.timelinedot} />
           </TimelineSeparator>
@@ -35,13 +36,13 @@ function ProfileTimeline() {
           </TimelineSeparator>
         )}
         <TimelineContent className={classes.timeline_content}>
-          {el}:{" "}
+          {el.charAt(0).toUpperCase() + el.slice(1)}:{" "}
           <Typography
             variant="caption"
             component="span"
             className={classes.data_values}
           >
-            {profile_data[el]}
+            {data[el]}
           </Typography>
         </TimelineContent>
       </TimelineItem>

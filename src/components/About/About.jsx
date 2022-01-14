@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
@@ -8,7 +8,9 @@ import StorageIcon from "@mui/icons-material/Storage";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import Skill from "../sub_components/Skill/Skill";
 import SubHeading from "../sub_components/Sub_Heading/SubHeading";
+import { globalContext } from "../../context/GlobalContext";
 function About() {
+  const data = useContext(globalContext).data.about;
   return (
     <Grid
       container
@@ -25,22 +27,10 @@ function About() {
             variant="body1"
             sx={{ color: "#4c4c4c", fontSize: "13px" }}
           >
-            Started earnest brother believe an exposed so. Me he believing
-            daughters if forfeited at furniture. Age again and stuff downs
-            spoke. Late hour new nay able fat each sell. Nor themselves age
-            introduced frequently use unsatiable devonshire get. They why quit
-            gay cold rose deal park. One same they four did ask busy. Reserved
-            opinions fat him nay position. Breakfast as zealously incommode do
-            agreeable furniture. One too nay led fanny allow plate.
+            {data.about[0]}
             <br />
             <br />
-            Quick six blind smart out burst. Perfectly on furniture dejection
-            determine my depending an to. Add short water court fat. Her
-            bachelor honoured perceive securing but desirous ham required.
-            Questions deficient acuteness to engrossed as. Entirely led ten
-            humoured greatest and yourself. Besides ye country on observe. She
-            continue appetite endeavor she judgment interest the met. For she
-            surrounded motionless fat resolution may.
+            {data.about[1]}
           </Typography>
         </Box>
       </Grid>
@@ -80,10 +70,10 @@ function About() {
                 variant="subtitle1"
                 component="span"
               >
-                FrontEnd Development
+                {data.services[0].type}
               </Typography>
               <Typography sx={{ color: "#4c4c4c", fontSize: "13px" }}>
-                I have been working on web design for 10 years.
+                {data.services[0].description}
               </Typography>
             </Box>
           </Paper>
@@ -118,10 +108,10 @@ function About() {
                 variant="subtitle1"
                 component="span"
               >
-                BackEnd Development
+                {data.services[1].type}
               </Typography>
               <Typography sx={{ color: "#4c4c4c", fontSize: "13px" }}>
-                I have been working on web design for 10 years.
+                {data.services[1].description}
               </Typography>
             </Box>
           </Paper>
@@ -156,10 +146,10 @@ function About() {
                 variant="subtitle1"
                 component="span"
               >
-                FullStack Development
+                {data.services[2].type}
               </Typography>
               <Typography sx={{ color: "#4c4c4c", fontSize: "13px" }}>
-                I have been working on web design for 10 years.
+                {data.services[2].description}
               </Typography>
             </Box>
           </Paper>
@@ -171,19 +161,30 @@ function About() {
             <SubHeading title="My Services" />
           </Grid>
           <Grid item sm={12} lg={6}>
-            <Skill skill="Html" progress={70} />
-            <Skill skill="Css" progress={65} />
-            <Skill skill="Javascript" progress={70} />
-            <Skill skill="Bootstrap" />
-            <Skill skill="React" />
-            <Skill skill="Material Ui" />
+            {data.skills.map((el, index) => {
+              return index < 6 ? (
+                <Skill
+                  skill={el.name}
+                  key={`${el}-${index}`}
+                  progress={el.progress}
+                ></Skill>
+              ) : (
+                ""
+              );
+            })}
           </Grid>
           <Grid item sm={12} lg={6} sx={{ px: 2 }}>
-            <Skill skill="Python" />
-            <Skill skill="Django/DRF" />
-            <Skill skill="PgSql" />
-            <Skill skill="Git/Githu" />
-            <Skill skill="deployment" />
+            {data.skills.map((el, index) => {
+              return index > 5 ? (
+                <Skill
+                  skill={el.name}
+                  key={`${el}-${index}`}
+                  progress={el.progress}
+                ></Skill>
+              ) : (
+                ""
+              );
+            })}
           </Grid>
         </Grid>
       </Grid>

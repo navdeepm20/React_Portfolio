@@ -41,6 +41,7 @@ export const useStyles = makeStyles({
     marginTop: "-13px",
     fontSize: "14px",
     color: "#000",
+    wordBreak: "break-word",
   },
   timelinedot_img: {
     position: "absolute",

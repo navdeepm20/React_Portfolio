@@ -1,6 +1,7 @@
 {
   "profile": {
     "name": "Navdeep Mishra",
+    "designation": "FullStack Web Developer",
     "birthday": "20/06/2000",
     "job": "FullStack Developer",
     "email": "navdeepmishra82734@gmail.com",
@@ -22,7 +23,7 @@
       },
       {
         "type": "FullStack Developement",
-        "description": "Let's create you website from scratch."
+        "description": "Let's create your website from scratch."
       }
     ],
     "skills": [
@@ -37,6 +38,40 @@
       { "name": "PgSql", "progress": 60 },
       { "name": "Git/Github", "progress": 60 },
       { "name": "Deployment", "progress": 60 }
+    ]
+  },
+  "resume": {
+    "work": [
+      {
+        "company": "Neurobit Technologies",
+        "time": "Nov 2021 - Present",
+        "description": "Currentyl working with Neurobit Technologies on position of FrontEnd Engineer."
+      },
+      {
+        "company": "Associate - HCL Technologies",
+        "time": "July 2021 - September 2021",
+        "description": "Worked with HCL Technologies on position of an Associate."
+      }
+    ],
+    "academics": [
+      {
+        "type": "Secondary",
+        "name": "Maharishi Vidya Mandir",
+        "time": "2015 - 2016",
+        "description": "Completed Secondary schooling with first division"
+      },
+      {
+        "type": "Sr. Secondary",
+        "name": "Maharishi Vidya Mandir",
+        "time": "2017-2018",
+        "description": "Completed Sr. Secondary schooling  with first division"
+      },
+      {
+        "type": "Graduation",
+        "name": "Amrapali Group of Institutes",
+        "time": "2018-2021",
+        "description": "Completed graduation with first division"
+      }
     ]
   }
 }
