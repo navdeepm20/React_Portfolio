@@ -4,6 +4,7 @@ export const useStyles = makeStyles({
   profile_container: {
     borderRadius: "10px",
     width: "100%",
+    marginBottom: "40px",
   },
   profile_name_designation_section: {
     padding: "20px",

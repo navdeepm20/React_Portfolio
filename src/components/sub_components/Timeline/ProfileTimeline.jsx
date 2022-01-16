@@ -7,22 +7,16 @@ import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
 import { useStyles } from "./timeline_styles";
 import { globalContext } from "../../../context/GlobalContext";
-const profile_data = {
-  Name: "Navdeep Mishra",
-  Birthday: "20/06/2000",
-  Job: "FullStack Developer",
-  Email: "navdeep@gm.com",
-  Skype: "skype@gm.com",
-};
+
 function ProfileTimeline() {
   const data = useContext(globalContext).data.profile;
   let counter = 0;
   const classes = useStyles();
-  return Object.keys(data).map((el, key) => {
+  return Object.keys(data).map((el, ind) => {
     counter += 1;
     return (
       <TimelineItem
-        key={key}
+        key={`timeline-${ind}`}
         className={(classes.timeline_item, classes.timeline_margin)}
       >
         {counter === Object.keys(data).length ? (

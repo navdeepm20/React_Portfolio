@@ -14,10 +14,26 @@ function App() {
     <GlobalContextProvider>
       <Container>
         <Grid container sx={{ marginTop: "60px" }}>
-          <Grid item xs={12} sm={12} md={4} lg={3} xl={3} sx={{ px: "15px" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={4}
+            lg={3}
+            xl={3}
+            sx={{ px: { xs: "5px", sm: "15px" } }}
+          >
             <Profile />
           </Grid>
-          <Grid item xs={12} sm={12} md={8} lg={9} xl={9} sx={{ px: "15px" }}>
+          <Grid
+            item
+            xs={12}
+            sm={12}
+            md={8}
+            lg={9}
+            xl={9}
+            sx={{ px: { xs: "5px", sm: "15px" } }}
+          >
             <Header />
             <TransitionGroup>
               <CSSTransition
