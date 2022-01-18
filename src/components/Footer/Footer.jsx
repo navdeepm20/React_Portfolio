@@ -2,20 +2,28 @@ import React from "react";
 import Stack from "@mui/material/Stack";
 import Box from "@mui/material/Box";
 import Typogrpahy from "@mui/material/Typography";
-import { useStyles } from "./footer_styles";
 
 function Footer(props) {
-  const classes = useStyles();
   return (
     <Stack
       direction="row"
       justifyContent="space-between"
       alignItems="center"
-      className={classes.footer}
+      sx={{
+        background: "#1e1e1e",
+        borderRadius: "10px",
+        minHeight: "70px",
+        padding: "15px",
+        color: "#fff",
+        marginBottom: "30px",
+      }}
     >
       <Box>
         <Typogrpahy
-          className={classes.footer_name}
+          sx={{
+            fontSize: { xs: "13px", sm: "15px" },
+            fontWeight: "500",
+          }}
           variant="body1"
           component="p"
         >
@@ -23,8 +31,12 @@ function Footer(props) {
         </Typogrpahy>
       </Box>
       <Box>
-        <Typogrpahy variant="body2" component="p">
-          © 2017 All rights reserved
+        <Typogrpahy
+          variant="body2"
+          component="p"
+          sx={{ fontSize: { xs: "12px", sm: "14px" } }}
+        >
+          © 2022 All Rights Reserved
         </Typogrpahy>
       </Box>
     </Stack>

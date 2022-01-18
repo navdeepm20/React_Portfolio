@@ -55,10 +55,10 @@
     ],
     "academics": [
       {
-        "type": "Secondary",
-        "name": "Maharishi Vidya Mandir",
-        "time": "2015 - 2016",
-        "description": "Completed Secondary schooling with first division"
+        "type": "Graduation",
+        "name": "Amrapali Group of Institutes",
+        "time": "2018-2021",
+        "description": "Completed graduation with first division"
       },
       {
         "type": "Sr. Secondary",
@@ -67,10 +67,10 @@
         "description": "Completed Sr. Secondary schooling  with first division"
       },
       {
-        "type": "Graduation",
-        "name": "Amrapali Group of Institutes",
-        "time": "2018-2021",
-        "description": "Completed graduation with first division"
+        "type": "Secondary",
+        "name": "Maharishi Vidya Mandir",
+        "time": "2015 - 2016",
+        "description": "Completed Secondary schooling with first division"
       }
     ]
   }

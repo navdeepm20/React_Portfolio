@@ -5,7 +5,6 @@ import HomeIcon from "@mui/icons-material/Home";
 import Stack from "@mui/material/Stack";
 import Grid from "@mui/material/Grid";
 import { Button, Typography } from "@mui/material";
-import { useStyles } from "./header_styles";
 import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import TwitterIcon from "@mui/icons-material/Twitter";
@@ -47,6 +46,28 @@ const IconStyles = {
   mx: "2px",
   display: { xs: "none", sm: "none", md: "none", lg: "block" },
 };
+const navbar_items = {
+  padding: "20px 0px 20px 0px",
+  fontWeight: "bold",
+  cursor: "pointer",
+  "&:hover": {
+    color: "#ffc500",
+  },
+  transition: ".2s ease",
+  textTransform: "uppercase",
+  fontSize: "14px",
+  display: "table-cell",
+  verticalAlign: "center",
+};
+const navbar_home = {
+  paddingRight: "20px",
+  paddingLeft: "20px",
+  background: "#ffc500",
+  borderRadius: "10px",
+  "&:hover": {
+    background: "#feb000",
+  },
+};
 function Header() {
   const [sideBar, showSideBar] = React.useState(false);
   const toggleDrawer = (open) => (event) => {
@@ -59,7 +80,7 @@ function Header() {
 
     showSideBar(open);
   };
-  const classes = useStyles();
+
   const context = useContext(globalContext);
 
   return (
@@ -80,14 +101,14 @@ function Header() {
                 display: { xs: "none", sm: "flex", md: "flex" },
               }}
             >
-              <Box className={`${classes.navbar_items} ${classes.navbar_home}`}>
+              <Box sx={{ ...navbar_items, ...navbar_home }}>
                 <StyledLink to="/" sx={{ ":hover": { color: "#111" } }}>
                   <HomeIcon />
                 </StyledLink>
               </Box>
 
               <Typography
-                className={classes.navbar_items}
+                sx={{ ...navbar_items }}
                 variant="body1"
                 component="h5"
               >
@@ -95,7 +116,7 @@ function Header() {
               </Typography>
 
               <Typography
-                className={classes.navbar_items}
+                sx={{ ...navbar_items }}
                 variant="body1"
                 component="h5"
               >
@@ -110,7 +131,7 @@ function Header() {
               </Typography>
 
               <Typography
-                className={classes.navbar_items}
+                sx={{ ...navbar_items }}
                 variant="body1"
                 component="h5"
               >
@@ -118,7 +139,7 @@ function Header() {
               </Typography>
 
               <Typography
-                className={classes.navbar_items}
+                sx={{ ...navbar_items }}
                 variant="body1"
                 component="h5"
               >
@@ -134,7 +155,7 @@ function Header() {
             <Drawer anchor="left" open={sideBar} onClose={toggleDrawer(false)}>
               <Stack sx={{ width: { xs: "50vw", sm: "30vw", md: "30vw" } }}>
                 <Typography
-                  className={classes.navbar_items}
+                  sx={{ ...navbar_items }}
                   sx={{ textAlign: "center" }}
                   variant="body1"
                   component="h5"
@@ -142,7 +163,7 @@ function Header() {
                   <StyledLink to="/">Home</StyledLink>
                 </Typography>
                 <Typography
-                  className={classes.navbar_items}
+                  sx={{ ...navbar_items }}
                   sx={{ textAlign: "center" }}
                   variant="body1"
                   component="h5"
@@ -152,7 +173,7 @@ function Header() {
 
                 <Typography
                   sx={{ textAlign: "center" }}
-                  className={classes.navbar_items}
+                  sx={{ ...navbar_items }}
                   variant="body1"
                   component="h5"
                 >
@@ -168,7 +189,7 @@ function Header() {
 
                 <Typography
                   sx={{ textAlign: "center" }}
-                  className={classes.navbar_items}
+                  sx={{ ...navbar_items }}
                   variant="body1"
                   component="h5"
                 >
@@ -177,7 +198,7 @@ function Header() {
 
                 <Typography
                   sx={{ textAlign: "center" }}
-                  className={classes.navbar_items}
+                  sx={{ ...navbar_items }}
                   variant="body1"
                   component="h5"
                 >
@@ -215,7 +236,6 @@ function Header() {
                   title="Hire Me"
                   icon={<SendIcon style={{ fontSize: "15px" }} />}
                 ></Btn>
-                {/* <Button onClick={toggleDrawer(true)}>Helloo</Button> */}
               </React.Fragment>
             </Box>
           </Stack>
