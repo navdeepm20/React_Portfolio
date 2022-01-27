@@ -153,18 +153,16 @@ function Header() {
               <WidgetsIcon fontSize="large" sx={{ color: "#ffc500" }} />
             </Box>
             <Drawer anchor="left" open={sideBar} onClose={toggleDrawer(false)}>
-              <Stack sx={{ width: { xs: "50vw", sm: "30vw", md: "30vw" } }}>
+              <Stack sx={{ width: { xs: "80vw", sm: "80vw", md: "40vw" } }}>
                 <Typography
-                  sx={{ ...navbar_items }}
-                  sx={{ textAlign: "center" }}
+                  sx={{ ...navbar_items, textAlign: "center" }}
                   variant="body1"
                   component="h5"
                 >
                   <StyledLink to="/">Home</StyledLink>
                 </Typography>
                 <Typography
-                  sx={{ ...navbar_items }}
-                  sx={{ textAlign: "center" }}
+                  sx={{ ...navbar_items, textAlign: "center" }}
                   variant="body1"
                   component="h5"
                 >
@@ -172,8 +170,7 @@ function Header() {
                 </Typography>
 
                 <Typography
-                  sx={{ textAlign: "center" }}
-                  sx={{ ...navbar_items }}
+                  sx={{ ...navbar_items, textAlign: "center" }}
                   variant="body1"
                   component="h5"
                 >
@@ -188,8 +185,7 @@ function Header() {
                 </Typography>
 
                 <Typography
-                  sx={{ textAlign: "center" }}
-                  sx={{ ...navbar_items }}
+                  sx={{ ...navbar_items, textAlign: "center" }}
                   variant="body1"
                   component="h5"
                 >
@@ -197,8 +193,7 @@ function Header() {
                 </Typography>
 
                 <Typography
-                  sx={{ textAlign: "center" }}
-                  sx={{ ...navbar_items }}
+                  sx={{ ...navbar_items, textAlign: "center" }}
                   variant="body1"
                   component="h5"
                 >
