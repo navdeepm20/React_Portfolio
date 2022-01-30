@@ -73,5 +73,16 @@
         "description": "Completed Secondary schooling with first division"
       }
     ]
+  },
+  "contact": {
+    "info": [
+      {
+        "Address": "107727 Santa Monica Boulevard Los Angeles",
+        "Phone": "+38 012-3456-7890",
+        "Job": "Freelancer",
+        "E-mail": "chris@domain.com",
+        "Skype": "chrisjohnson85"
+      }
+    ]
   }
 }

@@ -36,7 +36,7 @@ function About() {
       </Grid>
       <Grid item lg={12} sx={{ px: "30px", py: "40px" }}>
         <SubHeading title="My Services" />
-        <Box display="flex" justifyContent="flex-start" flexWrap="wrap">
+        <Box display="flex" justifyContent="center" flexWrap="wrap">
           {data.services.map((el, ind) => {
             return (
               <Paper

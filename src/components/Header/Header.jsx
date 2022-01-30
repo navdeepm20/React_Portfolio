@@ -139,11 +139,11 @@ function Header() {
               </Typography>
 
               <Typography
-                sx={{ ...navbar_items }}
+                sx={{ ...navbar_items, textAlign: "center" }}
                 variant="body1"
                 component="h5"
               >
-                Contact
+                <StyledLink to="/contact">Contact</StyledLink>
               </Typography>
             </Stack>
             <Box
@@ -197,7 +197,7 @@ function Header() {
                   variant="body1"
                   component="h5"
                 >
-                  Contact
+                  <StyledLink to="/contact">Contact</StyledLink>
                 </Typography>
               </Stack>
             </Drawer>

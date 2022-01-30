@@ -5,22 +5,39 @@ import TimelineConnector from "@mui/lab/TimelineConnector";
 import Typography from "@mui/material/Typography";
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
-import { useStyles } from "./timeline_styles";
 
 function ProfileTimeline(props) {
-  const classes = useStyles();
-
   return (
     <>
       {props.category === "work"
         ? props.data.map((el, ind) => {
             return (
               <TimelineItem
-                className={(classes.timeline_item, classes.timeline_margin)}
+                sx={{
+                  marginLeft: "15px",
+                  minHeight: "40px",
+                }}
+                key={ind}
               >
                 <TimelineSeparator>
-                  <TimelineDot className={classes.timelinedot} />
-                  <TimelineConnector className={classes.timelineconnector} />
+                  <TimelineDot
+                    sx={{
+                      background: "#ffc500",
+                      padding: 0,
+                      margin: 0,
+                      width: "10px",
+                      height: "10px",
+                      position: "relative",
+                    }}
+                  />
+                  <TimelineConnector
+                    sx={{
+                      background: "#bdbdbd",
+                      padding: 0,
+                      margin: 0,
+                      width: "1px",
+                    }}
+                  />
                 </TimelineSeparator>
 
                 <TimelineContent sx={{ pb: "40px", pl: "30px", pt: 0 }}>
@@ -53,12 +70,31 @@ function ProfileTimeline(props) {
         : props.data.map((el, ind) => {
             return (
               <TimelineItem
-                className={(classes.timeline_item, classes.timeline_margin)}
+                sx={{
+                  marginLeft: "15px",
+                  minHeight: "40px",
+                }}
                 key={ind}
               >
                 <TimelineSeparator>
-                  <TimelineDot className={classes.timelinedot} />
-                  <TimelineConnector className={classes.timelineconnector} />
+                  <TimelineDot
+                    sx={{
+                      background: "#ffc500",
+                      padding: 0,
+                      margin: 0,
+                      width: "10px",
+                      height: "10px",
+                      position: "relative",
+                    }}
+                  />
+                  <TimelineConnector
+                    sx={{
+                      background: "#bdbdbd",
+                      padding: 0,
+                      margin: 0,
+                      width: "1px",
+                    }}
+                  />
                 </TimelineSeparator>
 
                 <TimelineContent sx={{ pb: "40px", pl: "30px", pt: 0 }}>

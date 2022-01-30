@@ -2,42 +2,72 @@ import React, { useContext } from "react";
 import TimelineDot from "@mui/lab/TimelineDot";
 import TimelineSeparator from "@mui/lab/TimelineSeparator";
 import TimelineConnector from "@mui/lab/TimelineConnector";
-import Typography from "@mui/material/Typography";
+
 import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
-import { useStyles } from "./timeline_styles";
+
 import { globalContext } from "../../../context/GlobalContext";
+import TimelineData from "../TimelineData/TimelineData";
 
 function ProfileTimeline() {
   const data = useContext(globalContext).data.profile;
   let counter = 0;
-  const classes = useStyles();
+
   return Object.keys(data).map((el, ind) => {
     counter += 1;
     return (
       <TimelineItem
         key={`timeline-${ind}`}
-        className={(classes.timeline_item, classes.timeline_margin)}
+        sx={{
+          marginLeft: "15px",
+          minHeight: "40px",
+        }}
       >
         {counter === Object.keys(data).length ? (
-          <TimelineSeparator>
-            <TimelineDot className={classes.timelinedot} />
+          <TimelineSeparator key={`separator-${ind}`}>
+            <TimelineDot
+              sx={{
+                background: "#ffc500",
+                padding: 0,
+                margin: 0,
+                width: "10px",
+                height: "10px",
+                position: "relative",
+              }}
+            />
           </TimelineSeparator>
         ) : (
-          <TimelineSeparator>
-            <TimelineDot className={classes.timelinedot} />
-            <TimelineConnector className={classes.timelineconnector} />
+          <TimelineSeparator key={`separator-${ind}`}>
+            <TimelineDot
+              sx={{
+                background: "#ffc500",
+                padding: 0,
+                margin: 0,
+                width: "10px",
+                height: "10px",
+                position: "relative",
+              }}
+            />
+            <TimelineConnector
+              sx={{
+                background: "#bdbdbd",
+                padding: 0,
+                margin: 0,
+                width: "1px",
+              }}
+            />
           </TimelineSeparator>
         )}
-        <TimelineContent className={classes.timeline_content}>
-          {el.charAt(0).toUpperCase() + el.slice(1)}:{" "}
-          <Typography
-            variant="caption"
-            component="span"
-            className={classes.data_values}
-          >
-            {data[el]}
-          </Typography>
+        <TimelineContent
+          key={`content-${ind}`}
+          sx={{
+            marginTop: "-13px",
+            fontSize: "14px",
+            color: "#000",
+            wordBreak: "break-word",
+          }}
+        >
+          <TimelineData dkey={el} value={data[el]}></TimelineData>
         </TimelineContent>
       </TimelineItem>
     );

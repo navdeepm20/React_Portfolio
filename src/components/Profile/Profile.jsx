@@ -3,23 +3,35 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import prog from "../../assets/images/prog.jpg";
-import { useStyles } from "./profile_styles";
+
 import Btn from "../sub_components/Btn/Btn";
 import { TimelineComponent } from "../sub_components/Timeline/TimelineComponent";
 import CloudDownloadIcon from "@mui/icons-material/CloudDownload";
 import { globalContext } from "../../context/GlobalContext";
 const Profile = () => {
-  const classes = useStyles();
   const data = useContext(globalContext).data.profile;
 
   return (
-    <Paper square elevation={3} className={classes.profile_container}>
-      <Box className={classes.profile_name_designation_section}>
+    <Paper
+      square
+      elevation={3}
+      sx={{
+        borderRadius: "10px",
+        width: "100%",
+        marginBottom: "40px",
+      }}
+    >
+      <Box sx={{ p: "20px" }}>
         <Typography
           variant="subtitle1"
           component="div"
           gutterBottom
-          className={classes.name_title}
+          sx={{
+            textTransform: "uppercase",
+            fontWeight: 700,
+            fontSize: "17px",
+            color: "#333",
+          }}
         >
           {data.name}
         </Typography>
@@ -27,19 +39,45 @@ const Profile = () => {
           variant="subtitle2"
           component="p"
           gutterBottom
-          className={classes.designation}
+          sx={{
+            color: "#777777",
+            fontSize: "13px",
+            textTransform: "capitalize",
+          }}
         >
           {data.designation}
         </Typography>
       </Box>
-      <Box className={classes.profile_image_container}>
+      <Box
+        sx={{
+          width: "100%",
+          height: "100%",
+          position: "relative",
+          marginBottom: "1rem",
+          paddingBottom: "1px",
+        }}
+      >
         <img
           src={prog}
           alt="profile_image"
-          className={classes.profile_image_container_img}
+          style={{
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            clipPath: "polygon(0 9%, 100% 0, 100% 94%, 0% 100%)",
+            minHeight: "263px",
+          }}
         />
       </Box>
-      <Box className={classes.button_timeline_container}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          marginTop: "-35px",
+          alignItems: "flex-start",
+        }}
+      >
         <TimelineComponent
           type="Profile"
           icon_img={require("../../assets/images/glasses.png").default}

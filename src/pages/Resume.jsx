@@ -7,6 +7,7 @@ import SchoolOutlinedIcon from "@mui/icons-material/SchoolOutlined";
 import { globalContext } from "../context/GlobalContext";
 function Resume() {
   const data = useContext(globalContext).data;
+
   return (
     <Grid
       container

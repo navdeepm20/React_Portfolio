@@ -3,22 +3,28 @@ import TimelineItem from "@mui/lab/TimelineItem";
 import TimelineContent from "@mui/lab/TimelineContent";
 
 import TimelineBigDot from "./TimelineBigDot";
-import { useStyles } from "./timeline_styles";
+
 import ProfileTimeline from "./ProfileTimeline";
 import ResumeTimeline from "./ResumeTimeline";
 
 export const TimelineComponent = (props) => {
-  const classes = useStyles();
   return (
     <Timeline>
-      <TimelineItem className={classes.timeline_item}>
+      <TimelineItem sx={{ minHeight: "40px" }}>
         <TimelineBigDot
           icon_img={props.icon_img}
           icon={props.icon}
           size={props.size}
         />
 
-        <TimelineContent className={classes.timeline_content}></TimelineContent>
+        <TimelineContent
+          sx={{
+            marginTop: "-13px",
+            fontSize: "14px",
+            color: "#000",
+            wordBreak: "break-word",
+          }}
+        ></TimelineContent>
       </TimelineItem>
       {props.type.toLowerCase() === "profile" ? (
         <ProfileTimeline />
