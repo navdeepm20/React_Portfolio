@@ -25,8 +25,15 @@ export default function Contact(props) {
     >
       <Grid item md={6} sx={{ px: "30px", py: "40px" }}>
         <SubHeading title="Contact Form"></SubHeading>
-        <Box>
-          <form style={{ height: "200px", marginBottom: "20px" }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "flex-start",
+          }}
+        >
+          <form style={{ height: "200px", marginBottom: "40px" }}>
             <Grid container spacing={4}>
               <Grid item md={6}>
                 <TextField label="Name" variant="standard"></TextField>
@@ -48,10 +55,12 @@ export default function Contact(props) {
               </Grid>
             </Grid>
           </form>
-          <Btn
-            title="Submit"
-            icon={<SendIcon style={{ fontSize: "15px" }} />}
-          ></Btn>
+          <Box>
+            <Btn
+              title="Submit"
+              icon={<SendIcon style={{ fontSize: "15px" }} />}
+            ></Btn>
+          </Box>
         </Box>
       </Grid>
       <Grid item md={6} sx={{ px: "30px", py: "40px" }}>
