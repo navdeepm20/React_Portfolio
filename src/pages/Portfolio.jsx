@@ -7,84 +7,17 @@ import {
   Card,
   CardMedia,
   CardContent,
+  Fab,
+  Box,
 } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import MobileFriendlyIcon from "@mui/icons-material/MobileFriendly";
 import { styled } from "@mui/system";
 import cardimg from "../assets/images/cardimg.jpg";
 import { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import { globalContext } from "../context/GlobalContext";
-const portfolio_data = [
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "fullstack",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "fullstack",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "frontend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "frontend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "frontend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "frontend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "backend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "backend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "backend",
-    image: "Img",
-  },
-  {
-    title: "Lorem Ipsum",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores, sequi?",
-    tag: "backend",
-    image: "Img",
-  },
-];
+
 const StyledTypography = styled(
   Typography,
   {}
@@ -100,11 +33,15 @@ const StyledCard = styled(
 )({
   maxWidth: "283px",
   boxShadow: "0px 0px 48px 0px rgb(4 6 4 / 8%)",
+  // "&:hover .stack-container": {
+  //   display: "flex",
+  // },
 });
 
 function Portfolio() {
   const [tag, setTag] = useState("all");
   const context = useContext(globalContext);
+  const portfolio_data = context.data.portfolio;
   const changeTextColorOnClick = (e) => {
     e.target.classList.add("active");
     Array.from(document.getElementsByClassName("portfolio-subheading")).forEach(
@@ -176,11 +113,70 @@ function Portfolio() {
                     return (
                       <Grid key={ind} item xs={12} sm={6} md={6} lg={4}>
                         <StyledCard>
-                          <CardMedia
-                            component="img"
-                            image={cardimg}
-                            alt="Paella dish"
-                          />
+                          <Box
+                            sx={{
+                              position: "relative",
+                              display: "flex",
+                              justifyContent: "center",
+                              "&:hover .stack-container": {
+                                display: "flex",
+                                top: 0,
+                                opacity: 1,
+                                visibility: "visible",
+                              },
+                            }}
+                          >
+                            <CardMedia
+                              component="img"
+                              image={cardimg}
+                              alt="Paella dish"
+                            />
+                            <Stack
+                              direction="row"
+                              spacing={1}
+                              sx={{
+                                position: "absolute",
+                                top: "60px",
+                                marginTop: "70px",
+
+                                visibility: "hidden",
+                                // opacity: 0,
+                                transition:
+                                  "visibility .05s linear , top .3s linear",
+                              }}
+                              className="stack-container"
+                            >
+                              <Box
+                                sx={{
+                                  width: "30px",
+                                  height: "30px",
+                                  borderRadius: "50%",
+                                  backgroundColor: "#fff",
+                                  boxShadow: "0px 0px 48px 0px rgb(4 6 4 / 8%)",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                <GitHubIcon fontSize="10px" />
+                              </Box>
+                              <Box
+                                sx={{
+                                  width: "30px",
+                                  height: "30px",
+                                  borderRadius: "50%",
+                                  backgroundColor: "#fff",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                <MobileFriendlyIcon fontSize="10px" />
+                              </Box>
+                            </Stack>
+                          </Box>
                           <CardContent>
                             <Typography
                               component="h6"
@@ -205,11 +201,70 @@ function Portfolio() {
                     return (
                       <Grid item key={ind} xs={12} sm={6} md={6} lg={4}>
                         <StyledCard>
-                          <CardMedia
-                            component="img"
-                            image={cardimg}
-                            alt="Paella dish"
-                          />
+                          <Box
+                            sx={{
+                              position: "relative",
+                              display: "flex",
+                              justifyContent: "center",
+                              "&:hover .stack-container": {
+                                display: "flex",
+                                top: 0,
+                                opacity: 1,
+                                visibility: "visible",
+                              },
+                            }}
+                          >
+                            <CardMedia
+                              component="img"
+                              image={cardimg}
+                              alt="Paella dish"
+                            />
+                            <Stack
+                              direction="row"
+                              spacing={1}
+                              sx={{
+                                position: "absolute",
+                                top: "60px",
+                                marginTop: "70px",
+
+                                visibility: "hidden",
+                                // opacity: 0,
+                                transition:
+                                  "visibility .05s linear , top .3s linear",
+                              }}
+                              className="stack-container"
+                            >
+                              <Box
+                                sx={{
+                                  width: "30px",
+                                  height: "30px",
+                                  borderRadius: "50%",
+                                  backgroundColor: "#fff",
+                                  boxShadow: "0px 0px 48px 0px rgb(4 6 4 / 8%)",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                <GitHubIcon fontSize="10px" />
+                              </Box>
+                              <Box
+                                sx={{
+                                  width: "30px",
+                                  height: "30px",
+                                  borderRadius: "50%",
+                                  backgroundColor: "#fff",
+                                  display: "flex",
+                                  justifyContent: "center",
+                                  alignItems: "center",
+                                  cursor: "pointer",
+                                }}
+                              >
+                                <MobileFriendlyIcon fontSize="10px" />
+                              </Box>
+                            </Stack>
+                          </Box>
                           <CardContent>
                             <Typography
                               component="h6"
